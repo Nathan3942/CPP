@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/15 15:34:49 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/06/18 13:14:30 by vboxuser         ###   ########.fr       */
+/*   Created: 2024/06/21 15:20:45 by vboxuser          #+#    #+#             */
+/*   Updated: 2024/06/21 15:27:41 by vboxuser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "HumanA.hpp"
 
-int	main(int argc, char **argv)
+HumanA::HumanA(const std::string& name, Weapon& weapon) : name(name), weapon(weapon) {}
+
+HumanA::~HumanA()
 {
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		for (int i = 1; argv[i]; i++)
-		{
-			for (int j = 0; argv[i][j]; j++)
-				std::cout << (char) toupper(argv[i][j]);
-		}
-		std::cout << std::endl;
-	}
-	return (0);
+	std::cout << "Destructor : " << name << std::endl;
+}
+
+void	HumanA::attack() const
+{
+	std::cout << name << " attacks with their " << weapon.getType() << std::endl;
 }

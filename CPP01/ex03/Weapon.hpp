@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/15 15:34:49 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/06/18 13:14:30 by vboxuser         ###   ########.fr       */
+/*   Created: 2024/06/21 14:46:22 by vboxuser          #+#    #+#             */
+/*   Updated: 2024/06/24 04:47:51 by vboxuser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WEAPON_H
+#define WEAPON_H
+
+#include <string>
 #include <iostream>
 
-int	main(int argc, char **argv)
+class Weapon
 {
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		for (int i = 1; argv[i]; i++)
-		{
-			for (int j = 0; argv[i][j]; j++)
-				std::cout << (char) toupper(argv[i][j]);
-		}
-		std::cout << std::endl;
-	}
-	return (0);
-}
+	private:
+		std::string type;
+    public:
+		Weapon(const std::string& initialType);
+		~Weapon();
+		const std::string&	getType() const;
+		void	setType(const std::string& newType);
+};
+
+
+
+#endif

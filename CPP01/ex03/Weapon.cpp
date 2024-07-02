@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/15 15:34:49 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/06/18 13:14:30 by vboxuser         ###   ########.fr       */
+/*   Created: 2024/06/21 14:56:53 by vboxuser          #+#    #+#             */
+/*   Updated: 2024/06/21 15:47:23 by vboxuser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Weapon.hpp"
 
-int	main(int argc, char **argv)
+Weapon::Weapon(const std::string& initialType) : type(initialType) {}
+
+Weapon::~Weapon()
 {
-	if (argc == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		for (int i = 1; argv[i]; i++)
-		{
-			for (int j = 0; argv[i][j]; j++)
-				std::cout << (char) toupper(argv[i][j]);
-		}
-		std::cout << std::endl;
-	}
-	return (0);
+    std::cout << "Destructor : " << type << std::endl;
+}
+
+const std::string&	Weapon::getType() const
+{
+    return (type);
+}
+
+void	Weapon::setType(const std::string& newType)
+{
+	this->type = newType;
 }

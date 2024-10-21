@@ -5,21 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/17 17:36:41 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/06/20 03:11:32 by vboxuser         ###   ########.fr       */
+/*   Created: 2024/06/20 02:08:53 by vboxuser          #+#    #+#             */
+/*   Updated: 2024/06/20 03:14:35 by vboxuser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "zombie.hpp"
 
-
-
-int main()
+int main ()
 {
-    Zombie* bobZombie = newZombie("bobZombie");
-    bobZombie->annonce();
-    delete bobZombie;
+    Zombie* bobyZomboss = newZombie("bobZomboss");
+    bobyZomboss->annonce();
+    delete bobyZomboss;
 
-    randomChump("ramZombie");
+    randomChrump("kaka");
+
     return (0);
 }

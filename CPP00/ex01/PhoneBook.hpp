@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/23 14:06:28 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/05/23 16:24:16 by njeanbou         ###   ########.fr       */
+/*   Created: 2024/03/06 12:50:56 by njeanbou          #+#    #+#             */
+/*   Updated: 2024/05/24 14:56:42 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,16 @@
 
 class PhoneBook
 {
-    private:
-        Contact contact[8];
-        int index;
-        int totalContact;
+	private:
+		Contact contact[8];
+		int		index;
+		int		totalContact;
 
-    public:
-        PhoneBook();
-        void    addContact();
-        void    searchContact();
+	public:
+		PhoneBook();
+		void	addContact();
+		void	searchContact();
+		int		getIndex(int totalContact);
 };
 
 #endif

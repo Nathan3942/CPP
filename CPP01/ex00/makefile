@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/06/17 16:47:34 by vboxuser          #+#    #+#              #
-#    Updated: 2024/06/20 03:07:50 by vboxuser         ###   ########.fr        #
+#    Created: 2024/06/20 02:01:03 by vboxuser          #+#    #+#              #
+#    Updated: 2024/06/20 03:06:21 by vboxuser         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Zombie
 
 SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
-FLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -static-libasan 
+FLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -static-libasan
 CC = c++
 RM = rm -rf
 

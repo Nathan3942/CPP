@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/17 17:34:11 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/06/17 17:35:13 by vboxuser         ###   ########.fr       */
+/*   Created: 2024/06/20 02:31:09 by vboxuser          #+#    #+#             */
+/*   Updated: 2024/06/20 03:12:27 by vboxuser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "zombie.hpp"
 
-Zombie* newZombie(std::string name)
+Zombie*  newZombie(std::string name)
 {
     return new Zombie(name);
 }

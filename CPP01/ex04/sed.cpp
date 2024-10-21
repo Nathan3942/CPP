@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/24 05:10:48 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/06/24 05:30:29 by vboxuser         ###   ########.fr       */
+/*   Created: 2024/06/24 09:50:26 by vboxuser          #+#    #+#             */
+/*   Updated: 2024/06/24 10:17:48 by vboxuser         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,9 @@ void	Sed::remplace(std::string s1, std::string s2)
 			ofs.close();
 		}
 		else
-			std::cerr << "Empty file found" << std::endl;
-		ifs.close();
+			std::cout << "No surch text in " << this->inFile << std::endl;
 	}
 	else
-	{
-		std::cerr << "Unable to open the file" << std::endl;
-		exit(EXIT_FAILURE);
-	}
+		std::cout << "No such file in directory : " << this->inFile << std::endl;
+	ifs.close();
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 18:47:02 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:20:04 by njeanbou         ###   ########.fr       */
+/*   Created: 2024/09/03 11:09:30 by njeanbou          #+#    #+#             */
+/*   Updated: 2024/09/03 12:36:09 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define ANIMAL_HPP
 
 #include <iostream>
+#include <string>
 
 class Animal
 {
@@ -22,16 +23,15 @@ class Animal
 
     public:
         Animal();
-        Animal(std::string _type);
         Animal(const Animal& copy);
         virtual ~Animal();
 
         Animal& operator=(const Animal& equal);
 
         std::string getType() const;
-        virtual void    makeSound() const;
-
+        virtual void    makeSound() const = 0;
 };
+
 
 
 #endif

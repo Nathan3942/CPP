@@ -5,48 +5,46 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 18:51:36 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:16:51 by njeanbou         ###   ########.fr       */
+/*   Created: 2024/09/03 11:09:21 by njeanbou          #+#    #+#             */
+/*   Updated: 2024/09/03 11:41:37 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
+
 Animal::Animal() : type("Animal")
 {
-	std::cout << "Animal : Default constructor called" << std::endl;
-}
-
-Animal::Animal(std::string _type) : type(_type)
-{
-	std::cout << "Animal : " << type << " constructor called" << std::endl;
+    std::cout << "Animal : Default constructor called" << std::endl;
 }
 
 Animal::Animal(const Animal& copy) : type(copy.type)
 {
-	// *this = copy;
-	std::cout << "Animal : " << type << " copy constructor called" << std::endl;
+    std::cout << "Animal : Copy constructor called" << std::endl;
 }
 
 Animal::~Animal()
 {
-	std::cout << "Animal : Default destructor called" << std::endl;
+    std::cout << "Animal : Default destructor called" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal& equal)
 {
-	if (this != &equal)
-		this->type = equal.type;
-	std::cout << "Animal : assignment operator called" << std::endl;
-	return (*this);
+    if (this != &equal)
+    {
+        this->type = equal.type;
+    }
+    std::cout << "Animal : operator assignment called" << std::endl;
+    return (*this);
 }
 
-std::string	Animal::getType() const
+std::string Animal::getType() const
 {
-	return (this->type);
+    return (this->type);
 }
 
-void	Animal::makeSound() const
+void    Animal::makeSound() const
 {
-	std::cout << "Animal makes a generic sound" << std::endl;
+    std::cout << this->type << " make a generic sound" << std::endl;
 }
+

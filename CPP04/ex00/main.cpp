@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 18:45:04 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/21 20:24:10 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:20:00 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int main(void)
 {
-	cout << "==== Animal test ====" << endl;
+	std::cout << "==== Animal test ====" << std::endl;
 
 	const Animal* meta = new Animal();
 	const Animal* j = new Dog();
@@ -27,13 +27,13 @@ int main(void)
 
 	Cat o(h);
 
-	cout << meta->getType() << " " << endl;
-	cout << j->getType() << " " << endl;
-	cout << i->getType() << " " << endl;
-	cout << z.getType() << " " << endl;
-	cout << y->getType() << " " << endl;
-	cout << h.getType() << " " << endl;
-	cout << o.getType() << " " << endl;
+	std::cout << meta->getType() << " " << std::endl;
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	std::cout << z.getType() << " " << std::endl;
+	std::cout << y->getType() << " " << std::endl;
+	std::cout << h.getType() << " " << std::endl;
+	std::cout << o.getType() << " " << std::endl;
  
 	meta->makeSound();
 	j->makeSound();
@@ -48,13 +48,13 @@ int main(void)
 	delete i;
 	delete y;
 
-	cout << "==== Wrong Animal test ====" << endl;
+	std::cout << "==== Wrong Animal test ====" << std::endl;
 
 	const WrongAnimal* wrongMeta = new WrongAnimal();
 	const WrongAnimal* wrongCat = new WrongCat();
 
-	cout << wrongMeta->getType() << " " << endl;
-	cout << wrongCat->getType() << " " << endl;
+	std::cout << wrongMeta->getType() << " " << std::endl;
+	std::cout << wrongCat->getType() << " " << std::endl;
 
 	wrongMeta->makeSound();
 	wrongCat->makeSound();

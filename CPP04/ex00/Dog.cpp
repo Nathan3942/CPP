@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:00:27 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/21 19:28:26 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:14:15 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,28 @@
 Dog::Dog()
 {
 	this->type = "Dog";
-	cout << "Dog : Default constructor called" << endl;
+	std::cout << "Dog : Default constructor called" << std::endl;
 }
 
 Dog::Dog(const Dog& copy) : Animal(copy)
 {
-	cout << "Dog : copy construcor called" << endl;
+	std::cout << "Dog : copy construcor called" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& equal)
 {
 	if (this != &equal)
 		this->type = equal.type;
-	cout << "Dog : assignment operator called" << endl;
+	std::cout << "Dog : assignment operator called" << std::endl;
 	return (*this);
 }
 
 Dog::~Dog()
 {
-	cout << "Dog : Default destrucor called" << endl;
+	std::cout << "Dog : Default destrucor called" << std::endl;
 }
 
 void	Dog::makeSound() const 
 {
-	cout << "Wouaf Wouaf" << endl;
+	std::cout << "Wouaf Wouaf" << std::endl;
 }

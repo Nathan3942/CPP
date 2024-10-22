@@ -5,24 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 18:45:04 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:18:23 by njeanbou         ###   ########.fr       */
+/*   Created: 2024/09/03 11:09:06 by njeanbou          #+#    #+#             */
+/*   Updated: 2024/10/22 16:26:53 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongCat.hpp"
+#include "Cat.hpp"
 
-int main(void)
+int main()
 {
-	// const Animal* j = new Dog();
-	// const Animal* i = new Cat();
-
-	// delete j;
-	// delete i;
-
-	const int numAnimal = 4;
+    const int numAnimal = 4;
 	Animal* a[numAnimal];
 
 	for (int i = 0; i < numAnimal / 2; ++i)
@@ -58,6 +51,11 @@ int main(void)
 
 	std::cout << "Idea 0 : " << nDog.getBrain()->ideas[0] << std::endl;
 	std::cout << "Idea 1 : " << nDog.getBrain()->ideas[1] << std::endl;
+
+	// Animal* dog = new Dog();
+	// Animal* cat = new Cat();
+
+	// Animal* ani = new Animal();
 
 	return (0);
 }

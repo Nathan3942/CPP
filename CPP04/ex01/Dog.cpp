@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:00:27 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/21 21:09:24 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:17:44 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 Dog::Dog() : brain(new Brain())
 {
 	this->type = "Dog";
-	cout << "Dog : Default constructor called" << endl;
+	std::cout << "Dog : Default constructor called" << std::endl;
 }
 
 Dog::Dog(const Dog& copy) : Animal(copy)
 {
 	brain = new Brain(*copy.brain);
-	cout << "Dog : copy construcor called" << endl;
+	std::cout << "Dog : copy construcor called" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& equal)
@@ -32,19 +32,19 @@ Dog& Dog::operator=(const Dog& equal)
 		delete brain;
 		brain = new Brain(*equal.brain);
 	}
-	cout << "Dog : assignment operator called" << endl;
+	std::cout << "Dog : assignment operator called" << std::endl;
 	return (*this);
 }
 
 Dog::~Dog()
 {
 	delete brain;
-	cout << "Dog : Default destrucor called" << endl;
+	std::cout << "Dog : Default destrucor called" << std::endl;
 }
 
 void	Dog::makeSound() const 
 {
-	cout << "Wouaf Wouaf" << endl;
+	std::cout << "Wouaf Wouaf" << std::endl;
 }
 
 Brain*	Dog::getBrain() const 

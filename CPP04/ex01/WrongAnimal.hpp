@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:37:42 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/21 19:40:30 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:18:49 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,18 @@
 #define WRONGANIMAL_HPP
 
 #include <iostream>
-using namespace std;
 
 class WrongAnimal
 {
 	protected:
-		string type;
+		std::string type;
 
 	public:
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal& copy);
 		~WrongAnimal();
 
-		string	getType() const;
+		std::string	getType() const;
 		void	makeSound() const;
 };
 

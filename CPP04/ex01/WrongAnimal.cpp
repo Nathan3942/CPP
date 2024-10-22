@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:41:19 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/21 19:59:28 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/10/22 16:20:52 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 WrongAnimal::WrongAnimal() : type("WrongAnimal")
 {
-	cout << "WrongAnimal : Default constructor called" << endl;
+	std::cout << "WrongAnimal : Default constructor called" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& copy) : type(copy.type)
 {
-	cout << "WrongAnimal : Copy construcort called" << endl;
+	std::cout << "WrongAnimal : Copy construcort called" << std::endl;
 }
 
 WrongAnimal::~WrongAnimal()
 {
-	cout << "WrongAnimal : Default destrucor called" << endl;
+	std::cout << "WrongAnimal : Default destrucor called" << std::endl;
 }
 
-string	WrongAnimal::getType() const 
+std::string	WrongAnimal::getType() const 
 {
 	return (this->type);
 }
 
 void	WrongAnimal::makeSound() const 
 {
-	cout << "Generic WrongAnimal sound" << endl;
+	std::cout << "Generic WrongAnimal sound" << std::endl;
 }

@@ -6,14 +6,15 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:42:53 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 17:20:27 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/10/30 18:51:33 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cure.hpp"
 
-Cure::Cure() : type()
+Cure::Cure()
 {
+	this->type = "cure";
 	std::cout << "Cure : Default constructor called" << std::endl;
 }
 

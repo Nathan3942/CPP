@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 16:43:17 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 18:25:16 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/10/30 18:46:12 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Character::Character(std::string name): _name(name)
 Character::Character(const Character& copy) : _name(copy._name)
 {
     for (int i = 0; i < 4; i++)
-        this->_inventory[i] = new AMateria(*copy._inventory[i]);
+		this->_inventory[i] = copy._inventory[i];
     std::cout << "Character : Copy constructor called" << std::endl;    
 }
 
@@ -57,9 +57,10 @@ void	Character::equip(AMateria* m)
 	int equip = 0;
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_inventory[i] == nullptr)
+		if (m && this->_inventory[i] == nullptr)
 		{
 			this->_inventory[i] = m;
+			std::cout << "Equip " << m->getType() << " in index " << i << std::endl;
 			equip = 1;
 			break ;
 		}
@@ -79,5 +80,6 @@ void	Character::use(int idx, ICharacter& target)
 {
 	if (this->_inventory[idx] == nullptr)
 		std::cout << "This index is empty" << std::endl;
-	this->_inventory[idx]->use(target);
+	else
+		this->_inventory[idx]->use(target);
 }

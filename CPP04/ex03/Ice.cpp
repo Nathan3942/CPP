@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 16:03:26 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:33:40 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/04 21:28:31 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 Ice::Ice()
 {
     this->type = "ice";
-    std::cout << "Ice : Default constructor called" << std::endl;
+    //std::cout << "Ice : Default constructor called" << std::endl;
 }
 
 Ice::Ice(const Ice& copy)
 {
     this->type = copy.type;
-    std::cout << "Ice : Copy constructor called" << std::endl;
+    //std::cout << "Ice : Copy constructor called" << std::endl;
 }
 
 Ice::~Ice()
 {
-    std::cout << "Ice : Default destructor called" << std::endl;
+    //std::cout << "Ice : Default destructor called" << std::endl;
 }
 
 Ice&    Ice::operator=(const Ice& equal)

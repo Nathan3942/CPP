@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:35:00 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 17:18:25 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/04 21:33:39 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 
 class Cure : public AMateria
 {
-	private:
-		std::string type;
 	public:
 		Cure();
 		Cure(const Cure& copy);

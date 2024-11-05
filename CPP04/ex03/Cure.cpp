@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:42:53 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/30 18:51:33 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/04 21:32:21 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,18 @@
 Cure::Cure()
 {
 	this->type = "cure";
-	std::cout << "Cure : Default constructor called" << std::endl;
+	//std::cout << "Cure : Default constructor called" << std::endl;
 }
 
-Cure::Cure(const Cure& copy) : type(copy.type)
+Cure::Cure(const Cure& copy)
 {
-	std::cout << "Cure : Copy constructor called" << std::endl;
+	this->type = copy.type;
+	//std::cout << "Cure : Copy constructor called" << std::endl;
 }
 
 Cure::~Cure()
 {
-	std::cout << "Cure : Default destructor called" << std::endl;
+	//std::cout << "Cure : Default destructor called" << std::endl;
 }
 
 Cure& Cure::operator=(const Cure& equal)

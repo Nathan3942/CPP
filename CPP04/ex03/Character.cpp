@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 16:43:17 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/30 18:46:12 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/05 04:59:20 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ Character::Character(std::string name): _name(name)
 {
     for(int i = 0; i < 4; i++)
         this->_inventory[i] = nullptr;
-    std::cout << "Character : Default constructor called" << std::endl;
+    //std::cout << "Character : Default constructor called" << std::endl;
 }
 
 Character::Character(const Character& copy) : _name(copy._name)
 {
     for (int i = 0; i < 4; i++)
 		this->_inventory[i] = copy._inventory[i];
-    std::cout << "Character : Copy constructor called" << std::endl;    
+    //std::cout << "Character : Copy constructor called" << std::endl;    
 }
 
 Character::~Character()
@@ -33,7 +33,7 @@ Character::~Character()
 		if (this->_inventory[i] != nullptr)
 			delete this->_inventory[i];
 	}
-    std::cout << "Character : Default constructor called" << std::endl;
+    //std::cout << "Character : Default constructor called" << std::endl;
 }
 
 Character& Character::operator=(const Character& equal)
@@ -73,6 +73,8 @@ void	Character::unequip(int idx)
 {
 	if (this->_inventory[idx] == nullptr)
 		std::cout << "This index is empty" << std::endl;
+
+	std::cout << "Unequip in index " << idx << std::endl;
 	this->_inventory[idx] = nullptr;
 }
 

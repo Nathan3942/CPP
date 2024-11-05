@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 16:21:56 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/30 18:50:02 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/04 21:28:44 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ MateriaSource::MateriaSource()
 {
 	for (int i = 0; i < 4; i++)
 		this->invertory[i] = nullptr;
-	std::cout << "MateriaSource : Default constructor called" << std::endl;
+	//std::cout << "MateriaSource : Default constructor called" << std::endl;
 }
 
 MateriaSource::MateriaSource(const MateriaSource & copy)
@@ -28,7 +28,7 @@ MateriaSource::MateriaSource(const MateriaSource & copy)
 		else
 			break ;
 	}
-	std::cout << "MateriaSource : Copy constructor called" << std::endl;
+	//std::cout << "MateriaSource : Copy constructor called" << std::endl;
 }
 
 MateriaSource::~MateriaSource()
@@ -38,7 +38,7 @@ MateriaSource::~MateriaSource()
 		if (this->invertory[i] != nullptr)
 			delete this->invertory[i];
 	}
-	std::cout << "MateriaSource : Default destructor called" << std::endl;
+	//std::cout << "MateriaSource : Default destructor called" << std::endl;
 }
 
 void	MateriaSource::learnMateria(AMateria* lm)
@@ -68,7 +68,7 @@ AMateria*	MateriaSource::createMateria(std::string const & type)
 			return (this->invertory[i]->clone());
 		}
 	}
-	return (0);
+	return (0);        
 }
 
 int		MateriaSource::intMaterialLearn(const AMateria* lm)

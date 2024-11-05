@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 16:03:18 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/09/03 16:34:50 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/04 21:33:48 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class Ice: public AMateria
         Ice(const Ice& copy);
         ~Ice();
 
-        Ice&    operator=(const Ice& euqal);
+    Ice&    operator=(const Ice& euqal);
 
-        virtual AMateria*    clone() const;
-        virtual void    use(ICharacter& target);
+    virtual AMateria*    clone() const;
+    virtual void    use(ICharacter& target);
 };
 
 

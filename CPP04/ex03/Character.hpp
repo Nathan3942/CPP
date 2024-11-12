@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 16:36:22 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/09/03 16:41:51 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/12 10:55:29 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Character: public ICharacter
         void equip(AMateria* m);
         void unequip(int idx);
         void use(int idx, ICharacter& target);
-
+        AMateria*   get_memory_materia(int idx);
 };
 
 #endif

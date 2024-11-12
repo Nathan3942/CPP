@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 16:43:17 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/05 04:59:20 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/12 11:04:25 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Character::Character(std::string name): _name(name)
 {
     for(int i = 0; i < 4; i++)
-        this->_inventory[i] = nullptr;
+        this->_inventory[i] = NULL;
     //std::cout << "Character : Default constructor called" << std::endl;
 }
 
@@ -30,7 +30,7 @@ Character::~Character()
 {
 	for(int i = 0; i < 4; i++)
 	{
-		if (this->_inventory[i] != nullptr)
+		if (this->_inventory[i] != NULL)
 			delete this->_inventory[i];
 	}
     //std::cout << "Character : Default constructor called" << std::endl;
@@ -57,7 +57,7 @@ void	Character::equip(AMateria* m)
 	int equip = 0;
 	for (int i = 0; i < 4; i++)
 	{
-		if (m && this->_inventory[i] == nullptr)
+		if (m && this->_inventory[i] == NULL)
 		{
 			this->_inventory[i] = m;
 			std::cout << "Equip " << m->getType() << " in index " << i << std::endl;
@@ -71,17 +71,24 @@ void	Character::equip(AMateria* m)
 
 void	Character::unequip(int idx)
 {
-	if (this->_inventory[idx] == nullptr)
+	if (this->_inventory[idx] == NULL)
 		std::cout << "This index is empty" << std::endl;
 
 	std::cout << "Unequip in index " << idx << std::endl;
-	this->_inventory[idx] = nullptr;
+	this->_inventory[idx] = NULL;
 }
 
 void	Character::use(int idx, ICharacter& target)
 {
-	if (this->_inventory[idx] == nullptr)
+	if (this->_inventory[idx] == NULL)
 		std::cout << "This index is empty" << std::endl;
 	else
 		this->_inventory[idx]->use(target);
+}
+
+AMateria*	Character::get_memory_materia(int idx)
+{
+	if (idx >= 4)
+		return (NULL);
+	return (this->_inventory[idx]);
 }

@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:50:34 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/21 17:05:48 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 14:29:46 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,6 @@ int PhoneBook::getIndex(int totalContact)
             std::cout << "Invalid input. Re-enter index: ";
         }
     }
-
     return id;
 }
 

@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:42:26 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/12 15:48:00 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 15:37:03 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator=(const ShrubberyCreationF
 	return (*this);
 }
 
-std::string	ShrubberyCreationForm::getTarget()
+std::string	ShrubberyCreationForm::getTarget() const
 {
 	return (this->_target);
 }
 
-void	ShrubberyCreationForm::execute(const Bureaucrat& bur)
+void	ShrubberyCreationForm::tree(const Bureaucrat& bur)
 {
 	if (bur.getGrade() > this->getSignGrade())
 		throw (Bureaucrat::GradeTooLowException());
@@ -63,6 +63,7 @@ void	ShrubberyCreationForm::execute(const Bureaucrat& bur)
 			outFile << "    ||    \n";
 			outFile << "    ||    \n";
 			outFile << "    ||    \n";
+			outFile << std::endl;
 		}
 		outFile.close();
 	}
@@ -71,4 +72,5 @@ void	ShrubberyCreationForm::execute(const Bureaucrat& bur)
 std::ofstream&	operator<<(std::ofstream& out, ShrubberyCreationForm& form)
 {
 	out << form.getName() << ", target : " << form.getTarget();
+	return (out);
 }

@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:42:12 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/12 15:47:14 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 15:34:07 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define SHRUBBERYCREATIONFORM_HPP
 
 #include "AForm.hpp"
+#include "Bureaucrat.hpp"
 #include "fstream"
 
 class ShrubberyCreationForm : public AForm
@@ -30,13 +31,13 @@ class ShrubberyCreationForm : public AForm
 
 		ShrubberyCreationForm&	operator=(const ShrubberyCreationForm& equal);
 
-		std::string	getTarget();
-		void	execute(const Bureaucrat& bur);
+		std::string	getTarget() const;
+		void	tree(const Bureaucrat& bur);
 
-		class OpenFileExeption : public std::exception
-		{
-			const char*	what() const throw();
-		};
+		// class OpenFileExeption : public std::exception
+		// {
+		// 	const char*	what() const throw();
+		// };
 };
 
 std::ofstream&	operator<<(std::ofstream& out, ShrubberyCreationForm& form);

@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:17:44 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 15:22:22 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 21:22:13 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class Bureaucrat
 		void				increment();
 		void				decrement();
 		void				signForm(AForm& form);
+		void				executeForm(const AForm& form);
 
 		class GradeTooHighException : public std::exception
 		{
@@ -44,6 +45,11 @@ class Bureaucrat
 		};
 
 		class GradeTooLowException : public std::exception
+		{
+			const char*	what() const throw();
+		};
+
+		class NotSignedException : public std::exception
 		{
 			const char*	what() const throw();
 		};

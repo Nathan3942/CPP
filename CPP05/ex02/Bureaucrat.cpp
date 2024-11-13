@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:17:57 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 15:33:48 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 21:23:29 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,19 @@ void	Bureaucrat::signForm(AForm& form)
 	std::cout << this->_name << " signed " << form.getName() << std::endl;
 }
 
+void	Bureaucrat::executeForm(const AForm& form)
+{
+	int resExecute = form.execute(*this);
+	if (resExecute == 0)
+		std::cout << this->_name << " executed " << form.getName() << std::endl;
+	else
+		std::cout << this->_name << " can't execut " << form.getName() << std::endl;
+	if (resExecute == 1)
+		throw (NotSignedException());
+	else if (resExecute == 2)
+		throw (GradeTooLowException());
+}
+
 const char*	Bureaucrat::GradeTooHighException::what() const throw()
 {
 	return ("Bureaucrat : Grade too high!");
@@ -90,6 +103,11 @@ const char*	Bureaucrat::GradeTooHighException::what() const throw()
 const char*	Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return ("Bureaucrat : Grade too low!");
+}
+
+const char*	Bureaucrat::NotSignedException::what() const throw()
+{
+	return ("AForm : Not signed!");
 }
 
 std::ostream&	operator<<(std::ostream& out, const Bureaucrat& bur)

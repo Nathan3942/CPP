@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:42:26 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 15:37:03 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 21:23:56 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,15 @@ void	ShrubberyCreationForm::tree(const Bureaucrat& bur)
 		}
 		outFile.close();
 	}
+}
+
+int	ShrubberyCreationForm::execute(const Bureaucrat& bur) const
+{
+	if (this->getSigned() == false)
+		return (1);
+	if (bur.getGrade() > this->getExGrade())
+		return (2);
+	return (0);
 }
 
 std::ofstream&	operator<<(std::ofstream& out, ShrubberyCreationForm& form)

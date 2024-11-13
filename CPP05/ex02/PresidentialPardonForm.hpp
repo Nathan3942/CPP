@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:43:12 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 15:34:22 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:52:27 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class PresidentialPardonForm : public AForm
 
 		std::string	getTarget() const;
 		void	pardon(const Bureaucrat& bur);
+		int		execute(const Bureaucrat& bur) const;
 
 };
 

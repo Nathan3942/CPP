@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:43:23 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 15:25:10 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 21:23:51 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,15 @@ void    PresidentialPardonForm::pardon(const Bureaucrat& bur)
     {
         std::cout << this->_target << " has been pardoned by Zaphod Beeblebrox!" << std::endl;
     }
+}
+
+int PresidentialPardonForm::execute(const Bureaucrat& bur) const
+{
+	if (this->getSigned() == false)
+		return (1);
+	if (bur.getGrade() > this->getExGrade())
+		return (2);
+	return (0);
 }
 
 std::ostream&   operator<<(std::ostream& out, PresidentialPardonForm& form)

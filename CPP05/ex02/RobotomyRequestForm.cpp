@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:42:58 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 15:27:36 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 21:19:02 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,20 @@ void    RobotomyRequestForm::robotization(const Bureaucrat& bur)
         std::srand(std::time(nullptr));
         double randomValue = static_cast<double>(std::rand()) / RAND_MAX;
         std::cout << "VVVVVVVvvvvvVVvvvvv(bruit de persage ;)" << std::endl;
-        std::cout << "RandomValue :" << randomValue << std::endl;
         if (randomValue > 0.5)
             std::cout << "Success! " << this->_target << " is robotic" << std::endl;
         else
             std::cout << "Fail! " << this->_target << " is not robotic :(" << std::endl;
     }
+}
+
+int	RobotomyRequestForm::execute(const Bureaucrat& bur) const
+{
+	if (this->getSigned() == false)
+		return (1);
+	if (bur.getGrade() > this->getExGrade())
+		return (2);
+	return (0);
 }
 
 std::ostream&   operator<<(std::ostream& out, RobotomyRequestForm& form)

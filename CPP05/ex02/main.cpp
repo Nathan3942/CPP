@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:15:05 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 15:47:31 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 21:36:04 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,11 @@ int main(void)
         f1.robotization(b1);
         std::cout << std::endl;
         f2.tree(b1);
-        std::cout << std::endl;
         f3.pardon(b1);
+        std::cout << std::endl;
+        b1.executeForm(f1);
+        b1.executeForm(f2);
+        b1.executeForm(f3);
     }
     catch (std::exception &e)
     {

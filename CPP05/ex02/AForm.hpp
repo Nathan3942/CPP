@@ -41,6 +41,7 @@ class AForm
 		int			getExGrade() const;
 
 		void		beSigned(const Bureaucrat& bur);
+		virtual int	execute(const Bureaucrat& bur) const = 0;
 
 		class GradeTooHighException : public std::exception
 		{

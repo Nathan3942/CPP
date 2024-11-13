@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:42:12 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 15:34:07 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:46:03 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class ShrubberyCreationForm : public AForm
 
 		std::string	getTarget() const;
 		void	tree(const Bureaucrat& bur);
+		int	execute(const Bureaucrat& bur) const;
 
 		// class OpenFileExeption : public std::exception
 		// {

@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:42:44 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 15:34:15 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:49:49 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class RobotomyRequestForm : public AForm
 
 		std::string	getTarget() const;
 		void	robotization(const Bureaucrat& bur);
+		int		execute(const Bureaucrat& bur) const;
 
 };
 

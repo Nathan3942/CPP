@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:33:06 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/14 18:16:16 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:24:54 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Intern::Intern(const Intern& copy)
 
 Intern::~Intern()
 {
-	
+	std::cout << "Intern : Destructor called" << std::endl;
 }
 
 static AForm*	makePresident(const std::string target)
@@ -49,12 +49,12 @@ AForm*	Intern::makeForm(const std::string formName, const std::string target)
 
 	for (int i = 0; i < 3; i++)
 	{
-		if (form[i] == target)
+		if (form[i].compare(formName) == 0)
 		{
-			std::cout << "Intern creat " << formName << std::endl;
+			std::cout << "Intern create " << formName << std::endl;
 			return (all_form[i](target));
 		}
 	}
-	std::cout << "Intern can't creat " << formName << std::endl;
-	return (NULL);
+	std::cout << "Intern can't create " << formName << std::endl;
+	return (nullptr);
 }

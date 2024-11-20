@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:42:26 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 21:23:56 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:15:37 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& copy) 
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
 {
-	
+	std::cout << "ShrubberyCreationForm : destructor called" << std::endl;
 }
 
 ShrubberyCreationForm&	ShrubberyCreationForm::operator=(const ShrubberyCreationForm& equal)

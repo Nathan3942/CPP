@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:43:23 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 21:23:51 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:12:30 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& cop
 
 PresidentialPardonForm::~PresidentialPardonForm()
 {
-
+    std::cout << "PresidentialPardonForm : destructor called" << std::endl;
 }
 
 PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPardonForm& equal)

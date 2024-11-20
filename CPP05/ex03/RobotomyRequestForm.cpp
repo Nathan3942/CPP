@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:42:58 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 21:19:02 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:15:36 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& copy) : AFor
 
 RobotomyRequestForm::~RobotomyRequestForm()
 {
-
+    std::cout << "RobotomyRequestForm : destructor called" << std::endl;
 }
 
 RobotomyRequestForm&    RobotomyRequestForm::operator=(const RobotomyRequestForm& equal)

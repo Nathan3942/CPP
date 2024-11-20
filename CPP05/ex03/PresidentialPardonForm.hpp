@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:43:12 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 20:52:27 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:20:48 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PresidentialPardonForm : public AForm
 		PresidentialPardonForm();
 		PresidentialPardonForm(const std::string target);
 		PresidentialPardonForm(const PresidentialPardonForm& copy);
-		~PresidentialPardonForm();
+		virtual ~PresidentialPardonForm();
 
 
 		PresidentialPardonForm&	operator=(const PresidentialPardonForm& equal);

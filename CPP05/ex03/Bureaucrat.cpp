@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 11:17:57 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 21:23:29 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:18:46 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat& copy) : _name(copy._name)
 
 Bureaucrat::~Bureaucrat()
 {
-	// std::cout << "Bureaucrat : Default destructor called" << std::endl;
+	std::cout << "Bureaucrat : Default destructor called" << std::endl;
 }
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& equal)
@@ -70,6 +70,11 @@ void	Bureaucrat::decrement()
 
 void	Bureaucrat::signForm(AForm& form)
 {
+	if (!&form)
+	{
+		std::cout << "No form" << std::endl;
+		return ;
+	}
 	try
 	{
 		form.beSigned(*this);
@@ -84,6 +89,11 @@ void	Bureaucrat::signForm(AForm& form)
 
 void	Bureaucrat::executeForm(const AForm& form)
 {
+	if (!&form)
+	{
+		std::cout << "No form" << std::endl;
+		return ;
+	}
 	int resExecute = form.execute(*this);
 	if (resExecute == 0)
 		std::cout << this->_name << " executed " << form.getName() << std::endl;

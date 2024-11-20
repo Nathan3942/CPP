@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:42:12 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 20:46:03 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:21:03 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ShrubberyCreationForm : public AForm
 		ShrubberyCreationForm();
 		ShrubberyCreationForm(const std::string target);
 		ShrubberyCreationForm(const ShrubberyCreationForm& copy);
-		~ShrubberyCreationForm();
+		virtual ~ShrubberyCreationForm();
 
 
 		ShrubberyCreationForm&	operator=(const ShrubberyCreationForm& equal);

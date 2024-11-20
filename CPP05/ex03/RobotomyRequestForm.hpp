@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 14:42:44 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/13 20:49:49 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:20:56 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class RobotomyRequestForm : public AForm
 		RobotomyRequestForm();
 		RobotomyRequestForm(const std::string target);
 		RobotomyRequestForm(const RobotomyRequestForm& copy);
-		~RobotomyRequestForm();
+		virtual ~RobotomyRequestForm();
 
 
 		RobotomyRequestForm&	operator=(const RobotomyRequestForm& equal);

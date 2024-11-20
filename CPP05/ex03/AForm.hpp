@@ -31,7 +31,7 @@ class AForm
 		AForm();
 		AForm(std::string name, int signGrade, int exNote);
 		AForm(const AForm& copy);
-		~AForm();
+		virtual ~AForm();
 
 		AForm&	operator=(const AForm& equal);
 

@@ -46,6 +46,13 @@ AForm::~AForm()
 	
 }
 
+AForm& AForm::operator=(const AForm& equal)
+{
+	if (this != &equal)
+		this->_signed = equal._signed;
+	return (*this);
+}
+
 void	AForm::beSigned(const Bureaucrat& bur)
 {
 	if (bur.getGrade() > this->_signGrade)

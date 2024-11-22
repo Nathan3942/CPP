@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:33:06 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/20 18:24:54 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/22 18:46:34 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,6 @@ AForm*	Intern::makeForm(const std::string formName, const std::string target)
 			return (all_form[i](target));
 		}
 	}
-	std::cout << "Intern can't create " << formName << std::endl;
+	std::cout << "Intern can't create " << formName << std::endl << "Bad form name!" << std::endl;
 	return (nullptr);
 }

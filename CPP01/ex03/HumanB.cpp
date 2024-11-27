@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
+/*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 15:24:36 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/06/21 15:52:35 by vboxuser         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:14:38 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(const std::string& name) : name(name), weapon(nullptr) {}
+HumanB::HumanB(const std::string& name) : name(name), weapon(NULL) 
+{
+	
+}
 
 HumanB::~HumanB()
 {

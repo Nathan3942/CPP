@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
+/*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 10:19:33 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/06/24 12:56:52 by vboxuser         ###   ########.fr       */
+/*   Updated: 2024/11/26 13:04:27 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,14 @@ void	Harl::error()
 
 void	Harl::complain(std::string level)
 {
+	if (level.compare("Exit") == 0)
+		return ;
 	std::string lvl[] = {"Debug", "Info", "Warning", "Error"};
 	int i = 0;
 	while(i < 4 && lvl[i].compare(level))
 		i++;
+	if (i == 4)
+		std::cout << "Hummm...." << std::endl;	
 	while (i < 4)
 	{
 		switch (i)
@@ -62,8 +66,6 @@ void	Harl::complain(std::string level)
 			case 3:
 				this->error();
 				break;
-			default:
-				std::cout << "Hummm...." << std::endl;	
 		}
 		i++;
 	}

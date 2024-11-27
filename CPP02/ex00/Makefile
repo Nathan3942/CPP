@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+         #
+#    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/24 17:23:41 by vboxuser          #+#    #+#              #
-#    Updated: 2024/06/24 17:23:58 by vboxuser         ###   ########.fr        #
+#    Updated: 2024/11/26 14:20:16 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixe
+NAME = fixe
 
 SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)
-FLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -static-libasan
+FLAGS = -Wall -Werror -Wextra -std=c++98
 CC = c++
 RM = rm -rf
 

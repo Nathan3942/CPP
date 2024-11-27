@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
+/*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 10:19:33 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/06/24 10:59:43 by vboxuser         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:26:42 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
 Harl::Harl()
-{}
+{
+	
+}
 
 Harl::~Harl()
 {
@@ -42,6 +44,8 @@ void	Harl::error()
 
 void	Harl::complain(std::string level)
 {
+	if (level.compare("Exit") == 0)
+		return ;
 	t_func func[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string lvl[] = {"Debug", "Info", "Warning", "Error"};
 	for (int i = 0; i < 4; i++)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
+/*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 17:22:12 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/06/26 18:49:14 by vboxuser         ###   ########.fr       */
+/*   Updated: 2024/11/26 14:25:04 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,8 @@ int main ()
 	std::cout << c << std::endl;
 	
 	std::cout << Fixed::max(a, b) << std::endl;
+
+	a = b / 2;
+	std::cout << a << std::endl;
 	return (0);
 }

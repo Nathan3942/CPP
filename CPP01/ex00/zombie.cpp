@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
+/*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/20 02:21:25 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/06/20 03:12:12 by vboxuser         ###   ########.fr       */
+/*   Updated: 2024/11/26 11:33:47 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,6 @@ Zombie::~Zombie()
 
 void	Zombie::annonce(void)
 {
-	std::cout << name << "BraiiiiiinnnzzZ" << std::endl;
+	std::cout << name << " : BraiiiiiinnnzzZ" << std::endl;
 }
 

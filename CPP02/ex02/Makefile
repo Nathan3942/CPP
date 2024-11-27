@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+         #
+#    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/24 17:23:41 by vboxuser          #+#    #+#              #
-#    Updated: 2024/06/25 15:21:03 by vboxuser         ###   ########.fr        #
+#    Updated: 2024/11/26 14:20:06 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed
+NAME = fixed
 
 SRC = $(wildcard *.cpp)
 OBJ = $(SRC:.cpp=.o)

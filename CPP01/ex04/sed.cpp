@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sed.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
+/*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 09:50:26 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/06/24 10:17:48 by vboxuser         ###   ########.fr       */
+/*   Updated: 2024/11/26 15:21:39 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ Sed::~Sed()
 
 void	Sed::remplace(std::string s1, std::string s2)
 {
-	std::ifstream ifs(this->inFile);
+	std::ifstream ifs(this->inFile.c_str());
 	if (ifs.is_open())
 	{
 		std::string content;
 		if (std::getline(ifs, content, '\0'))
 		{
-			std::ofstream ofs(this->outFile);
+			std::ofstream ofs(this->outFile.c_str());
 			size_t	pos = content.find(s1);
 			while (pos != std::string::npos)
 			{

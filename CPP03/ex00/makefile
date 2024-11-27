@@ -6,11 +6,11 @@
 #    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/19 17:15:30 by njeanbou          #+#    #+#              #
-#    Updated: 2024/11/27 15:15:10 by njeanbou         ###   ########.fr        #
+#    Updated: 2024/11/27 19:48:44 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ClapTrap
+NAME = clapTrap
 
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)

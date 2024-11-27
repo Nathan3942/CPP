@@ -6,7 +6,7 @@
 #    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/19 17:15:30 by njeanbou          #+#    #+#              #
-#    Updated: 2024/08/20 19:05:18 by njeanbou         ###   ########.fr        #
+#    Updated: 2024/11/27 19:57:36 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,14 +15,14 @@ NAME = DiamondTrap
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
-FLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -static-libasan
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -static-libsan
 CC = c++
 RM = rm -rf
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		$(CC) $(FLAGS) -o $(NAME) $(OBJS)
+		$(CC) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 		$(RM) $(NAME)

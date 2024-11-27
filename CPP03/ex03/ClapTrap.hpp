@@ -7,19 +7,23 @@ class ClapTrap
 {
     protected:
         std::string name;
-        int PV = 10;
-        int PE = 5;
-        int AD = 2;
+        int PV;
+        int PE;
+        int AD;
 
     public:
         ClapTrap();
         ClapTrap(std::string name);
         ClapTrap(const ClapTrap& copy);
-		~ClapTrap();
+		virtual ~ClapTrap();
+
+        ClapTrap&   operator=(const ClapTrap& equal);
+
+		int		getAD() const;
+
 		void	attack(const std::string& target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
-
 
 };
 

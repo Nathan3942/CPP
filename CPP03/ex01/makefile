@@ -6,16 +6,16 @@
 #    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/19 17:15:30 by njeanbou          #+#    #+#              #
-#    Updated: 2024/11/27 15:14:56 by njeanbou         ###   ########.fr        #
+#    Updated: 2024/11/27 19:48:47 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ScavTrap
+NAME = scavTrap
 
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -static-libasan
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -static-libsan
 CC = c++
 RM = rm -rf
 

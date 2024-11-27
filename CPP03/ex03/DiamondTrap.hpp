@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 18:21:17 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/21 17:24:26 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/27 20:48:14 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,14 @@ class DiamondTrap : public FragTrap, public ScavTrap
 	public:
 		DiamondTrap();
 		DiamondTrap(const std::string name);
-		~DiamondTrap();
+		DiamondTrap(const DiamondTrap& copy);
+		virtual ~DiamondTrap();
+
+		DiamondTrap&	operator=(const DiamondTrap& equal);
 
 		void	whoAmI(void);
 		void	attack(const std::string target);
+		void	annonce() const;
 };
 
 #endif

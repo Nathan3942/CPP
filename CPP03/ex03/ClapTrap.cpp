@@ -6,31 +6,47 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 17:25:03 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/21 17:24:15 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/27 19:52:15 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap()
+ClapTrap::ClapTrap() : name("Default"), PV(10), PE(10), AD(0)
 {
 	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name) : name(name)
+ClapTrap::ClapTrap(std::string name) : name(name), PV(10), PE(10), AD(0)
 {
 	std::cout << "ClapTrap default construcor called for " << name << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& copy)
+ClapTrap::ClapTrap(const ClapTrap& copy) : name(copy.name), PV(copy.PV), PE(copy.PE), AD(copy.AD)
 {
-	*this = copy;
-	std::cout << "ClapTrap : " << name << " copy constructor called" << std::endl;
+	std::cout << "ClapTrap copy construcor called for " << name << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
 	std::cout << "ClapTrap default destructor called for " << name << std::endl;
+}
+
+ClapTrap&	ClapTrap::operator=(const ClapTrap& equal)
+{
+	if (this != &equal)
+	{
+		this->name = equal.name;
+		this->PV = equal.PV;
+		this->PE = equal.PE;
+		this->AD = equal.AD;
+	}
+	return (*this);
+}
+
+int		ClapTrap::getAD() const
+{
+	return (this->AD);
 }
 
 void	ClapTrap::attack(const std::string& target)
@@ -80,4 +96,5 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 		std::cout << name << " dont have enery" << std::endl;
+	std::cout << "ClapTrap : " << name << " has again " << PE << " PE" << std::endl;
 }

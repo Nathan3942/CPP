@@ -6,20 +6,42 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 17:25:03 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/19 17:55:30 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:12:18 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : name(name)
+ClapTrap::ClapTrap(std::string name) : name(name), PV(10), PE(2), AD(0)
 {
 	std::cout << "Default construcor called for " << name << std::endl;
+}
+
+ClapTrap::ClapTrap(const ClapTrap& copy) : name(copy.name), PV(copy.PV), PE(copy.PE), AD(copy.AD)
+{
+	std::cout << "Copy construcor called for " << name << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
 	std::cout << "Default destructor called for " << name << std::endl;
+}
+
+ClapTrap&	ClapTrap::operator=(const ClapTrap& equal)
+{
+	if (this != &equal)
+	{
+		this->name = equal.name;
+		this->PV = equal.PV;
+		this->PE = equal.PE;
+		this->AD = equal.AD;
+	}
+	return (*this);
+}
+
+int		ClapTrap::getAD() const
+{
+	return (this->AD);
 }
 
 void	ClapTrap::attack(const std::string& target)
@@ -69,4 +91,5 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 	else
 		std::cout << name << " dont have enery";
+	std::cout << name << " has again " << PE << " PE" << std::endl;
 }

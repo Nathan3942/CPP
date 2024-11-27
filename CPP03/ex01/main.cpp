@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 17:48:41 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/20 17:29:52 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:30:57 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,13 @@ int main()
     ClapTrap carlos("Carlos");
 
     scav.attack("Boba");
-    boba.takeDamage(20);
+    boba.takeDamage(scav.getAD());
     boba.beRepaired(20);
-    carlos.beRepaired(50);
     scav.guardGate();
+
+    boba.attack("Carlos");
+    carlos.takeDamage(boba.getAD());
+    carlos.beRepaired(50);
 
     return (0);
 }

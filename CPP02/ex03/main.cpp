@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 16:12:24 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/26 14:30:19 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/27 14:56:02 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 int main()
 {
-	Point p(1.0f, 2.0f);
-	Point a(1.0f, 1.0f);
-	Point b(1.0f, 4.0f);
-	Point c(4.0f, 3.0f);
+	Point p(10.0f, 8.0f);
+	Point a(10.0f, 12.0f);
+	Point b(4.0f, 4.0f);
+	Point c(14.0f, 4.0f);
 
 	if (bsp(a, b, c, p))
 		std::cout << "Est a l'interieur du triangle" << std::endl;

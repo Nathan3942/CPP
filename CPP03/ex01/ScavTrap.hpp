@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:34:12 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/20 17:03:21 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:34:32 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class ScavTrap : public ClapTrap
         ScavTrap(std::string name);
         ~ScavTrap();
 
-        void    attack(const std::string& target);
-        void    guardGate();
+        ScavTrap&   operator=(const ScavTrap& equal);
 
+        void    guardGate();
 };
 
 

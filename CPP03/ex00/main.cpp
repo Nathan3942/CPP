@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 17:48:41 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/19 17:57:37 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:12:53 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ int main()
 	ClapTrap kaka("Kaka");
 
 	boba.attack("Kaka");
-	kaka.takeDamage(0);
+	kaka.takeDamage(boba.getAD());
 	boba.attack("Kaka");
-	kaka.takeDamage(0);
+	kaka.takeDamage(boba.getAD());
 	boba.attack("Kaka");
-	kaka.takeDamage(0);
+	kaka.takeDamage(boba.getAD());
 	kaka.beRepaired(2);
 	return (0);
 }

@@ -6,13 +6,13 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:33:59 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/20 17:26:55 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/27 15:34:23 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap() : ClapTrap()
+ScavTrap::ScavTrap() : ClapTrap("Default")
 {
     this->PV = 100;
     this->PE = 50;
@@ -33,21 +33,16 @@ ScavTrap::~ScavTrap()
     std::cout << "ScavTrap default destructor called for " << name << std::endl;
 }
 
-void	ScavTrap::attack(const std::string& target)
+ScavTrap&	ScavTrap::operator=(const ScavTrap& equal)
 {
-	if (PV <= 0)
+	if (this != &equal)
 	{
-		std::cout << "ScavTrap : " << name << " is dead" << std::endl;
-		return ;
+		this->name = equal.name;
+		this->PV = equal.PV;
+		this->PE = equal.PE;
+		this->AD = equal.AD;
 	}
-	if (PE > 0)
-	{
-		std::cout << "ScavTrap : " << name << " attack " << target << " and hit him for " << AD << " dommage" << std::endl;
-		this->PE -= 1;
-	}
-	else
-		std::cout << "ScavTrap : " << name << " dont have enery" << std::endl;
-	std::cout << "ScavTrap : " << name << " has again " << PE << " PE" << std::endl;
+	return (*this);
 }
 
 void    ScavTrap::guardGate()

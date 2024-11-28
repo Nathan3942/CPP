@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 17:25:03 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/27 19:52:15 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/28 18:05:58 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,9 @@ ClapTrap::ClapTrap(std::string name) : name(name), PV(10), PE(10), AD(0)
 	std::cout << "ClapTrap default construcor called for " << name << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& copy) : name(copy.name), PV(copy.PV), PE(copy.PE), AD(copy.AD)
+ClapTrap::ClapTrap(const ClapTrap& copy)
 {
+	*this = copy;
 	std::cout << "ClapTrap copy construcor called for " << name << std::endl;
 }
 

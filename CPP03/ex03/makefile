@@ -6,16 +6,16 @@
 #    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/19 17:15:30 by njeanbou          #+#    #+#              #
-#    Updated: 2024/11/27 19:57:36 by njeanbou         ###   ########.fr        #
+#    Updated: 2024/11/28 19:15:17 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = DiamondTrap
+NAME = diamondTrap
 
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -static-libsan
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address -static-libasan
 CC = c++
 RM = rm -rf
 

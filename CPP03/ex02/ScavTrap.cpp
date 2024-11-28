@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:33:59 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/27 16:11:01 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/28 19:02:32 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 ScavTrap::ScavTrap() : ClapTrap("Default")
 {
+    this->guard_mode = false;
     this->PV = 100;
     this->PE = 50;
     this->AD = 20;
@@ -22,10 +23,17 @@ ScavTrap::ScavTrap() : ClapTrap("Default")
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
+    this->guard_mode = false;
     this->PV = 100;
     this->PE = 50;
     this->AD = 20;
     std::cout << "ScavTrap constructor called for " << name << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& copy) : ClapTrap(copy)
+{
+    this->guard_mode = copy.guard_mode;
+    std::cout << "ScavTrap copy constructor called for " << name << std::endl;
 }
 
 ScavTrap::~ScavTrap()
@@ -47,5 +55,11 @@ ScavTrap&	ScavTrap::operator=(const ScavTrap& equal)
 
 void    ScavTrap::guardGate()
 {
-    std::cout << "ScavTrap : " << name << " is now in Gate keeper mode" << std::endl;
+    if (this->guard_mode == false)
+    {
+		this->guard_mode = true;
+        std::cout << "ScavTrap : " << name << " is now in Gate keeper mode" << std::endl;
+    }
+	else
+		std::cout << "ScavTrap : " << name << " is early in Gate keeper mode" << std::endl;
 }

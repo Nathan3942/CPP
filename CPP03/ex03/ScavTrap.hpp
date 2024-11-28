@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:34:12 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/27 20:19:17 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/28 19:13:08 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,20 @@
 
 class ScavTrap : virtual public ClapTrap
 {
+    private:
+        bool guard_mode;
+
     public:
         ScavTrap();
         ScavTrap(std::string name);
-        ~ScavTrap();
+        ScavTrap(const ScavTrap& copy);
+        virtual ~ScavTrap();
 
         ScavTrap&   operator=(const ScavTrap& equal);
 
         void    guardGate();
 };
+
 
 
 #endif

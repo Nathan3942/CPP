@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 17:33:21 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/27 20:37:13 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/28 18:44:47 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,26 @@
 
 FragTrap::FragTrap() : ClapTrap()
 {
-	this->PV = 80;
-	this->PE = 100;
+	if (this->PV == 10)
+		this->PV = 100;
+	if (this->PE != 10 && this->PE != 50)
+		this->PE = 100;
 	this->AD = 30;
 	std::cout << "FragTrap : default constructor called" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	this->PV = 80;
-	this->PE = 100;
+	if (this->PV == 10)
+		this->PV = 100;
+	if (this->PE != 10 && this->PE != 50)
+		this->PE = 100;
 	this->AD = 30;
 	std::cout << "FragTrap : " << name << " constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& copy) : ClapTrap(copy.name)
+FragTrap::FragTrap(const FragTrap& copy) : ClapTrap(copy)
 {
-	this->PV = copy.PV;
-	this->PE = copy.PE;
-	this->AD = copy.AD;
 	std::cout << "FragTrap : " << name << " copy constructor called" << std::endl;
 }
 

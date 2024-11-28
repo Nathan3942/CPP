@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 18:21:17 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/27 20:48:14 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/28 17:01:11 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-class DiamondTrap : public FragTrap, public ScavTrap
+class DiamondTrap : public ScavTrap, public FragTrap
 {
 	private:
 		std::string _name;
@@ -30,7 +30,7 @@ class DiamondTrap : public FragTrap, public ScavTrap
 		DiamondTrap&	operator=(const DiamondTrap& equal);
 
 		void	whoAmI(void);
-		void	attack(const std::string target);
+		// // void	attack(const std::string target);
 		void	annonce() const;
 };
 

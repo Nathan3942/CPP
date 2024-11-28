@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 17:48:41 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/27 15:30:57 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/28 19:17:11 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main()
     scav.attack("Boba");
     boba.takeDamage(scav.getAD());
     boba.beRepaired(20);
+    scav.guardGate();
     scav.guardGate();
 
     boba.attack("Carlos");

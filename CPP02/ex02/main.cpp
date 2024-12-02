@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 17:22:12 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/11/26 14:25:04 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/02 11:29:43 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,27 @@ int main ()
 	a = b / 2;
 	std::cout << a << std::endl;
 	return (0);
+
+	// Fixed a;
+    // Fixed b(10);
+    // Fixed c(42.42f);
+    // Fixed d(b);
+
+    // std::cout << "a: " << a << std::endl;
+    // std::cout << "b: " << b << std::endl;
+    // std::cout << "c: " << c << std::endl;
+    // std::cout << "d: " << d << std::endl;
+
+    // a = Fixed(123456.4321f);
+    // std::cout << "a: " << a << std::endl;
+
+    // std::cout << "a + b: " << a + b << std::endl;
+    // std::cout << "a - b: " << a - b << std::endl;
+    // std::cout << "a * c: " << a * c << std::endl;
+    // std::cout << "a / c: " << a / c << std::endl;
+
+    // std::cout << "Max of a and b: " << Fixed::max(a, b) << std::endl;
+    // std::cout << "Min of a and b: " << Fixed::min(a, b) << std::endl;
+
+    // return (0);
 }

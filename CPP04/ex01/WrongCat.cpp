@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:49:23 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:19:21 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:46:04 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,13 @@ WrongCat::WrongCat(const WrongCat& copy) : WrongAnimal(copy)
 WrongCat::~WrongCat()
 {
 	std::cout << "WrongCat : Default destructor called" << std::endl;
+}
+
+WrongCat&	WrongCat::operator=(const WrongCat& equal)
+{
+	if (this != &equal)
+		this->type = equal.type;
+	return (*this);
 }
 
 std::string	WrongCat::getType() const 

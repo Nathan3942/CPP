@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:41:19 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:20:52 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:48:06 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,13 @@ WrongAnimal::WrongAnimal(const WrongAnimal& copy) : type(copy.type)
 WrongAnimal::~WrongAnimal()
 {
 	std::cout << "WrongAnimal : Default destrucor called" << std::endl;
+}
+
+WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& equal)
+{
+	if (this != &equal)
+		this->type = equal.type;
+	return (*this);
 }
 
 std::string	WrongAnimal::getType() const 

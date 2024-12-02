@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:37:42 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:20:22 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:58:15 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class WrongAnimal
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal& copy);
 		~WrongAnimal();
+
+		WrongAnimal& operator=(const WrongAnimal& equal);
 
 		std::string	getType() const;
 		void	makeSound() const;

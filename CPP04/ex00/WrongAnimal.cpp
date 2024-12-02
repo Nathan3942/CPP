@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:41:19 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:14:33 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:59:14 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,14 @@ WrongAnimal::~WrongAnimal()
 	std::cout << "WrongAnimal : Default destrucor called" << std::endl;
 }
 
-string	WrongAnimal::getType() const 
+WrongAnimal&	WrongAnimal::operator=(const WrongAnimal& equal)
+{
+	if (this != &equal)
+		this->type = equal.type;
+	return (*this);
+}
+
+std::string	WrongAnimal::getType() const 
 {
 	return (this->type);
 }

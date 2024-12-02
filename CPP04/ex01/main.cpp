@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 18:45:04 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:18:23 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/02 15:51:46 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,10 @@ int main(void)
 
 	std::cout << "Idea 0 : " << nDog.getBrain()->ideas[0] << std::endl;
 	std::cout << "Idea 1 : " << nDog.getBrain()->ideas[1] << std::endl;
+
+	Dog kDog(nDog);
+	std::cout << "Idea 0 : " << kDog.getBrain()->ideas[0] << std::endl;
+	std::cout << "Idea 1 : " << kDog.getBrain()->ideas[1] << std::endl;
 
 	return (0);
 }

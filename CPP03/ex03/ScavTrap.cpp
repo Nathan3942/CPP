@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 16:33:59 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/28 19:12:30 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/29 17:44:26 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ ScavTrap::ScavTrap() : ClapTrap("Default")
     this->guard_mode = false;
     this->PV = 100;
     this->PE = 50;
-    this->AD = 20;
+    if (this->AD != 30)
+        this->AD = 20;
     std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
@@ -26,7 +27,8 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
     this->guard_mode = false;
     this->PV = 100;
     this->PE = 50;
-    this->AD = 20;
+    if (this->AD != 30)
+        this->AD = 20;
     std::cout << "ScavTrap constructor called for " << name << std::endl;
 }
 
@@ -51,6 +53,38 @@ ScavTrap&	ScavTrap::operator=(const ScavTrap& equal)
 		this->AD = equal.AD;
 	}
 	return (*this);
+}
+
+void	ScavTrap::attack(const std::string& target)
+{
+	if (PV <= 0)
+	{
+		std::cout << "ScavTrap : " << name << " is dead" << std::endl;
+		return ;
+	}
+	if (PE > 0)
+	{
+		std::cout << "ScavTrap : " << name << " attack " << target << " and hit him for " << AD << " dommage" << std::endl;
+		this->PE -= 1;
+	}
+	else
+		std::cout << "ScavTrap : " << name << " dont have enery" << std::endl;
+	std::cout << "ScavTrap : " << name << " has again " << PE << " PE" << std::endl;
+}
+
+int	ScavTrap::getPV() const
+{
+	return (this->PV);
+}
+
+int	ScavTrap::getPE() const
+{
+	return (this->PE);
+}
+
+int	ScavTrap::getAD() const
+{
+	return (this->AD);
 }
 
 void    ScavTrap::guardGate()

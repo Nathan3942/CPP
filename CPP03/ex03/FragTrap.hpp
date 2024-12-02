@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 17:33:01 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/28 16:07:32 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:40:47 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,11 @@ class FragTrap : virtual public ClapTrap
 		~FragTrap();
 
 		FragTrap&	operator=(const FragTrap& equal);
+
+		//getter
+		int	getPV() const;
+		int	getPE() const;
+		int	getAD() const;
 
 		void	highFiveGuys(void);
 };

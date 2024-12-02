@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:46:38 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:20:25 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:55:19 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class WrongCat : public WrongAnimal
 		WrongCat();
 		WrongCat(const WrongCat& copy);
 		~WrongCat();
+
+		WrongCat&	operator=(const WrongCat& equal);
 
 		std::string	getType() const;
 		void	makeSound() const;

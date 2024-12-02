@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 18:56:29 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:20:08 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:34:52 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Dog : public Animal
 
 		Dog& operator=(const Dog& equal);
 
-		void	makeSound() const override;
+		void	makeSound() const;
 };
 
 #endif

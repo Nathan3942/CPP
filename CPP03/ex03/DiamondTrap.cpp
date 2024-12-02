@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 18:21:39 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/28 18:46:18 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/29 17:48:58 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 DiamondTrap::DiamondTrap(): ClapTrap("defaultDT_clap_trap")
 {
 	this->_name = "defaultDT";
-	this->PV = FragTrap::PV;
-	this->PE = ScavTrap::PE;
-	this->AD = FragTrap::AD;
+	this->PV = FragTrap::getPV();
+	this->PE = ScavTrap::getPE();
+	this->AD = FragTrap::getAD();
 	std::cout << "DiamondTrap Default Constructor called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &copy): ClapTrap(copy), ScavTrap(copy), FragTrap(copy)
+DiamondTrap::DiamondTrap(const DiamondTrap &copy): ClapTrap(copy), FragTrap(copy), ScavTrap(copy)
 {
 	*this = copy;
 	std::cout << "DiamondTrap Copy Constructor called" << std::endl;
@@ -30,9 +30,9 @@ DiamondTrap::DiamondTrap(const DiamondTrap &copy): ClapTrap(copy), ScavTrap(copy
 DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_trap")
 {
 	this->_name = name;
-	this->PV = FragTrap::PV;
-	this->PE = ScavTrap::PE;
-	this->AD = FragTrap::AD;
+	this->PV = FragTrap::getPV();
+	this->PE = ScavTrap::getPE();
+	this->AD = FragTrap::getAD();
 	std::cout << "DiamondTrap Constructor for the name " << this->_name << " called" << std::endl;
 }
 
@@ -111,10 +111,10 @@ void    DiamondTrap::whoAmI()
 // 	std::cout << this->PV << " " << this->PE << " " << this->AD << std::endl;
 // }
 
-// void    DiamondTrap::attack(const std::string target)
-// {
-//     ScavTrap::attack(target);
-// }
+void    DiamondTrap::attack(const std::string target)
+{
+    ScavTrap::attack(target);
+}
 
 void    DiamondTrap::annonce() const 
 {

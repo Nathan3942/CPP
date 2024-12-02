@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 17:48:41 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/28 18:46:47 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/29 16:20:38 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
     DiamondTrap didi("Didi");
-
+    didi.attack("Kaka");
     didi.annonce();
 	didi.takeDamage(20);
 	DiamondTrap boba(didi);

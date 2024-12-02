@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 17:33:21 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/28 18:44:47 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/11/29 17:48:48 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,21 @@ FragTrap&	FragTrap::operator=(const FragTrap& equal)
 		this->AD = equal.AD;
 	}
 	return (*this);
+}
+
+int	FragTrap::getPV() const
+{
+	return (this->PV);
+}
+
+int	FragTrap::getPE() const
+{
+	return (this->PE);
+}
+
+int	FragTrap::getAD() const
+{
+	return (this->AD);
 }
 
 void	FragTrap::highFiveGuys(void)

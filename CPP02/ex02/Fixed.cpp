@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vboxuser <vboxuser@student.42.fr>          +#+  +:+       +#+        */
+/*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 17:23:10 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/06/26 18:49:30 by vboxuser         ###   ########.fr       */
+/*   Updated: 2024/12/02 11:21:32 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -187,6 +187,7 @@ const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
 
 std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
 {
-	os << fixed.toFloat();
+	// os << fixed.toFloat();
+	os << std::setprecision(8) << fixed.toFloat();
 	return (os);
 }

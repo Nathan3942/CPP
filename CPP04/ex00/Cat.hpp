@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 19:22:10 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/08/21 19:33:30 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:34:54 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cat : public Animal
 
 		Cat& operator=(const Cat& equal);
 
-		void	makeSound() const override;
+		void	makeSound() const;
 };
 
 #endif

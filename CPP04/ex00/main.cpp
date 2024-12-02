@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 18:45:04 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/10/22 16:20:00 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/02 14:39:58 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,18 @@
 
 int main(void)
 {
+	// const Animal* meta = new Animal();
+	// const Animal* j = new Dog();
+	// const Animal* i = new Cat();
+	// std::cout << j->getType() << " " << std::endl;
+	// std::cout << i->getType() << " " << std::endl;
+	// i->makeSound(); //will output the cat sound!
+	// j->makeSound();
+	// meta->makeSound();
+	// delete meta;
+	// delete j;
+	// delete i;
+
 	std::cout << "==== Animal test ====" << std::endl;
 
 	const Animal* meta = new Animal();

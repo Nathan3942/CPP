@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 16:42:53 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/04 21:32:21 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/05 17:12:08 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cure::Cure()
 	//std::cout << "Cure : Default constructor called" << std::endl;
 }
 
-Cure::Cure(const Cure& copy)
+Cure::Cure(const Cure& copy) : AMateria(copy)
 {
 	this->type = copy.type;
 	//std::cout << "Cure : Copy constructor called" << std::endl;

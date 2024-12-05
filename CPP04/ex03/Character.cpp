@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 16:43:17 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/11/12 11:04:25 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/05 17:24:06 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,10 @@ void	Character::equip(AMateria* m)
 		}
 	}
 	if (equip == 0)
+	{
+		delete m;
 		std::cout << "Inventory full" << std::endl;
+	}
 }
 
 void	Character::unequip(int idx)
@@ -80,8 +83,8 @@ void	Character::unequip(int idx)
 
 void	Character::use(int idx, ICharacter& target)
 {
-	if (this->_inventory[idx] == NULL)
-		std::cout << "This index is empty" << std::endl;
+	if (idx > 3 || this->_inventory[idx] == NULL)
+		std::cout << "This index is bad or empty" << std::endl;
 	else
 		this->_inventory[idx]->use(target);
 }

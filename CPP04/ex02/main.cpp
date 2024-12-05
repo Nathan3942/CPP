@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 11:09:06 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/12/02 15:56:23 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/05 17:09:16 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,11 +55,14 @@ int main()
 	Animal* dog = new Dog();
 	Animal* cat = new Cat();
 
-	Animal* ani = new Animal();
+	// Animal* ani = new Animal();
 
 	dog->makeSound();
 	cat->makeSound();
-	ani->makeSound();
+	// ani->makeSound();
+
+	delete dog;
+	delete cat;
 
 	return (0);
 }

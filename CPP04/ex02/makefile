@@ -6,7 +6,7 @@
 #    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/03 11:03:30 by njeanbou          #+#    #+#              #
-#    Updated: 2024/12/02 15:55:22 by njeanbou         ###   ########.fr        #
+#    Updated: 2024/12/05 17:09:45 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = Poly
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -static-libasan
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 CC = c++
 RM = rm -rf
 

@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/03 16:03:26 by njeanbou          #+#    #+#             */
-/*   Updated: 2024/12/02 15:59:34 by njeanbou         ###   ########.fr       */
+/*   Updated: 2024/12/05 17:12:25 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Ice::Ice()
     //std::cout << "Ice : Default constructor called" << std::endl;
 }
 
-Ice::Ice(const Ice& copy)
+Ice::Ice(const Ice& copy) : AMateria(copy)
 {
     this->type = copy.type;
     //std::cout << "Ice : Copy constructor called" << std::endl;

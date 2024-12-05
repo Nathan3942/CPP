@@ -6,11 +6,11 @@
 #    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/03 11:03:30 by njeanbou          #+#    #+#              #
-#    Updated: 2024/12/02 15:57:18 by njeanbou         ###   ########.fr        #
+#    Updated: 2024/12/05 18:06:34 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex03
+NAME = interface
 
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)

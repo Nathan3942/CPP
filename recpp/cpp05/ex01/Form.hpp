@@ -1,0 +1,76 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Form.hpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/04 14:27:04 by njeanbou          #+#    #+#             */
+/*   Updated: 2025/04/08 19:05:29 by njeanbou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FORM_HPP
+#define FORM_HPP
+
+#include <iostream>
+#include <string>
+#include "Bureaucrat.hpp"
+
+class Bureaucrat;
+
+class Form
+{
+    private:
+        std::string _name;
+        bool    _isSigned;
+        int	_signeNote;
+		int	_execNote;
+
+	public:
+		Form(std::string name, int signeNote, int execNote);
+		Form(const Form& copy);
+		~Form();
+
+		Form&	operator=(const Form& equal);
+
+		void	beSigned(Bureaucrat& bur);
+
+		std::string getName() const;
+		bool	getSigned() const;
+		int		getSigneNote() const;
+		int		getExecNote() const;
+
+		class GradeTooLow : public std::exception
+        {
+        	const char* what() const throw();
+    	};
+
+    	class GradeTooHeigh : public std::exception
+    	{
+    		const char* what() const throw();
+    	};
+
+		// class GradeTooLow : public std::exception
+		// {
+		// 	private: 
+		// 		std::string _msg;
+		// 	public:
+		// 	GradeTooLow(const std::string& msg);
+		// 	virtual const char* what() const throw();
+		// };
+
+		// class GradeTooHeigh : public std::exception
+		// {
+		// 	private:
+		// 		std::string _msg;
+		// 	public:
+		// 		GradeTooHeigh(const std::string& msg);
+		// 		virtual const char* what() const throw();
+		// };
+
+};
+
+std::ostream&	operator<<(std::ostream& out, const Form& form);
+
+#endif 

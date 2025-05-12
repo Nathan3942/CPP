@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/01 00:10:09 by njeanbou          #+#    #+#             */
-/*   Updated: 2025/05/01 00:40:40 by njeanbou         ###   ########.fr       */
+/*   Updated: 2025/05/12 16:15:10 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ int	RPN::evaluate(const std::string& expression)
 			_stack.push(token[0] - '0');
 		}
 		else
-			throw std::runtime_error("Invalide token: " + token);
+			std::runtime_error("Invalide token: " + token);
 	}
 	if (_stack.size() != 1)
 		throw std::runtime_error("Invalide expression!");

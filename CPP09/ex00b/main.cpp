@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 01:47:18 by njeanbou          #+#    #+#             */
-/*   Updated: 2025/09/10 13:08:19 by njeanbou         ###   ########.fr       */
+/*   Created: 2025/10/21 16:05:40 by njeanbou          #+#    #+#             */
+/*   Updated: 2025/10/29 17:22:52 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#include "BitcoinExchange.hpp"
 
-#include <string>
-#include <iostream>
-
-
-template <typename T>
-void	swap(T& a, T& b)
+int main (int ac, char **av)
 {
-	T	tmp = a;
-	a = b;
-	b = tmp;
-}
+    if (ac == 1 || ac > 2)
+    {
+        std::cerr << "Error: could not open file." << std::endl;
+        return (1);
+    }
 
-template <typename M>
-const M&	min(M& a, M& b)
-{
-	return (b <= a ? b : a);
+    try
+    {
+        Bitcoin btc("data.csv");
+        btc.prossess_file(av[1]);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+	return (0);
 }
-
-template <typename M>
-const M&	max(M& a, M& b)
-{
-	return (b >= a ? b : a);
-}
-
-#endif

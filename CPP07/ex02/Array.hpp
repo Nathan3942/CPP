@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 02:20:54 by njeanbou          #+#    #+#             */
-/*   Updated: 2025/02/05 02:53:56 by njeanbou         ###   ########.fr       */
+/*   Updated: 2025/09/10 13:07:31 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,28 @@ class Array
 			{
 				delete[] _array;
 				_size = equal._size;
-				_array = new T[_size];
-				for (unsigned int i = 0; i < _size; i++)
-					_array[i] = equal._array[i];
+				if (_size == 0)
+				{
+					_array = NULL;
+				}
+				else
+				{
+					_array = new T[_size];
+					for (unsigned int i = 0; i < _size; i++)
+						_array[i] = equal._array[i];
+				}
 			}
 			return (*this);
 		}
+		
 		T&	operator[](unsigned int index)
+		{
+			if (index >= _size)
+				throw std::out_of_range("Index out of range!");
+			return (_array[index]);
+		}
+
+		const T&	operator[](unsigned int index) const
 		{
 			if (index >= _size)
 				throw std::out_of_range("Index out of range!");

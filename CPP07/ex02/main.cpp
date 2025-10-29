@@ -6,13 +6,14 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 02:20:37 by njeanbou          #+#    #+#             */
-/*   Updated: 2025/02/05 02:52:31 by njeanbou         ###   ########.fr       */
+/*   Updated: 2025/09/10 13:07:23 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Array.hpp"
 
-int main() {
+int main()
+{
     // Test de la construction sans paramètre
     Array<int> arr1;
     std::cout << "Size of arr1: " << arr1.size() << std::endl;
@@ -32,6 +33,16 @@ int main() {
         std::cerr << "Error: " << e.what() << std::endl;
     }
 
+    // Test avec un Array en const
+    const Array<int> arrConst(arr2); // construit à partir de arr2
+    std::cout << "Size of arrConst: " << arrConst.size() << std::endl;
+
+    std::cout << "arrConst[0]: " << arrConst[0] << std::endl;
+    std::cout << "arrConst[1]: " << arrConst[1] << std::endl;
+
+    // Pas de modification
+    // arrConst[0] = 42; 
+
     // Test de la construction par copie
     Array<int> arr3(arr2);
     std::cout << "Size of arr3: " << arr3.size() << std::endl;
@@ -46,9 +57,12 @@ int main() {
     std::cout << "arr4[1]: " << arr4[1] << std::endl;
 
     // Test de l'accès hors limites
-    try {
+    try
+    {
         std::cout << "arr4[10]: " << arr4[10] << std::endl;
-    } catch (const std::out_of_range& e) {
+    }
+    catch (const std::out_of_range& e)
+    {
         std::cerr << "Error: " << e.what() << std::endl;
     }
 

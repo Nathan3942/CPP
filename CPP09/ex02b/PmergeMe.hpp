@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   PmergeMe.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 01:47:18 by njeanbou          #+#    #+#             */
-/*   Updated: 2025/09/10 13:08:19 by njeanbou         ###   ########.fr       */
+/*   Created: 2025/05/22 15:57:25 by njeanbou          #+#    #+#             */
+/*   Updated: 2025/05/22 18:27:38 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#ifndef PMERGEME_HPP
+#define PMERGEME_HPP
 
-#include <string>
 #include <iostream>
+#include <string>
+#include <vector>
+#include <deque>
+#include <math.h>
 
-
-template <typename T>
-void	swap(T& a, T& b)
+class PmergeMe
 {
-	T	tmp = a;
-	a = b;
-	b = tmp;
-}
+    private:
+        
 
-template <typename M>
-const M&	min(M& a, M& b)
-{
-	return (b <= a ? b : a);
-}
+		std::vector<int>	mergeSort(std::vector<int>& v);
+    public:
+		std::vector<int> _vlst;
 
-template <typename M>
-const M&	max(M& a, M& b)
-{
-	return (b >= a ? b : a);
-}
+        PmergeMe(char** av, int ac);
+        PmergeMe(const PmergeMe& copy);
+		~PmergeMe();
+
+		void	sort();
+
+
+};
+
 
 #endif

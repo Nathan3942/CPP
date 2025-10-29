@@ -6,7 +6,7 @@
 #    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/03 11:03:30 by njeanbou          #+#    #+#              #
-#    Updated: 2025/02/05 02:04:21 by njeanbou         ###   ########.fr        #
+#    Updated: 2025/09/10 13:07:58 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = ex00
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address -static-libasan
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 CC = c++
 RM = rm -rf
 

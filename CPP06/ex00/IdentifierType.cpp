@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 11:02:43 by njeanbou          #+#    #+#             */
-/*   Updated: 2025/02/03 12:45:05 by njeanbou         ###   ########.fr       */
+/*   Updated: 2025/06/02 18:23:59 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,12 @@ e_type	witchType(const std::string& str, size_t& len)
 {
 	size_t	dot = str.find('.');
 	size_t	f = str.find('f');
+
+	for (size_t i = 0; i < str.size(); ++i)
+	{
+		if (!std::isdigit(str[i]) && str[i] != '.' && str[i] != 'f')
+			return (INVALID);
+	}
 
 	if (dot == std::string::npos)
 	{

@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 17:22:12 by vboxuser          #+#    #+#             */
-/*   Updated: 2024/12/02 11:29:43 by njeanbou         ###   ########.fr       */
+/*   Updated: 2025/05/15 17:04:22 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@ int main ()
 
 	a = b / 2;
 	std::cout << a << std::endl;
+
+
+    Fixed x(0.1f);
+    Fixed y(0.2f);
+    std::cout << x + y << std::endl;
+
 	return (0);
 
 	// Fixed a;

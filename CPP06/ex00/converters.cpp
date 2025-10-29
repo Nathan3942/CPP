@@ -6,7 +6,7 @@
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/03 11:41:18 by njeanbou          #+#    #+#             */
-/*   Updated: 2025/02/03 12:47:02 by njeanbou         ###   ########.fr       */
+/*   Updated: 2025/06/02 18:49:05 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ void	convertFloat(const std::string& str)
 	else
 		std::cout << static_cast<int>(f) << std::endl;
 	std::cout << "Float: ";
-	if (f < MIN_FLOAT || f > MAX_FLOAT)
+	if (f < -MIN_FLOAT || f > MAX_FLOAT)
 		std::cout << "impossible" << std::endl;
 	else
 		std::cout << f << (tolerance ? ".0f" : "f") << std::endl;
@@ -129,13 +129,13 @@ void	convertDouble(const std::string& str)
 	else 
 		std::cout << static_cast<int>(d) << std::endl;
 	std::cout << "Float: ";
-	if (d < MIN_FLOAT || d > MAX_FLOAT)
+	if (d < -MIN_FLOAT || d > MAX_FLOAT)
 		std::cout << "impossible" << std::endl;
 	else 
 		std::cout << static_cast<float>(d) << (tolerance ? ".0f" : "f") << std::endl;
-	std::cout << "Float: ";
-	if (d < MIN_DOUBLE || d > MAX_DOUBLE)
+	std::cout << "Double: ";
+	if (d < -MIN_DOUBLE || d > MAX_DOUBLE)
 		std::cout << "impossible" << std::endl;
 	else
-		std::cout << d << std::endl;
+		std::cout << d << (tolerance ? ".0" : "") << std::endl;
 }

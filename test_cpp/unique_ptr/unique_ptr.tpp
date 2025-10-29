@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   unique_ptr.tpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 01:47:18 by njeanbou          #+#    #+#             */
-/*   Updated: 2025/09/10 13:08:19 by njeanbou         ###   ########.fr       */
+/*   Created: 2025/06/02 19:26:57 by njeanbou          #+#    #+#             */
+/*   Updated: 2025/06/02 19:38:35 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#pragma once
 
-#include <string>
-#include <iostream>
+template <typename T>
+UniquePtr<T>::UniquePtr(T* p) : ptr(p)
+{
+    
+}
+
+template <typename T>
+UniquePtr<T>::~UniquePtr()
+{
+    delete ptr;
+}
 
 
 template <typename T>
-void	swap(T& a, T& b)
+T&  UniquePtr<T>::operator*() const
 {
-	T	tmp = a;
-	a = b;
-	b = tmp;
+    return (*ptr);
 }
 
-template <typename M>
-const M&	min(M& a, M& b)
-{
-	return (b <= a ? b : a);
-}
 
-template <typename M>
-const M&	max(M& a, M& b)
+template <typename T>
+T*  UniquePtr<T>::operator->() const
 {
-	return (b >= a ? b : a);
+    return (ptr);
 }
-
-#endif

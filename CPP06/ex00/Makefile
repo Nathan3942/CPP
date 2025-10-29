@@ -6,11 +6,11 @@
 #    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/03 11:03:30 by njeanbou          #+#    #+#              #
-#    Updated: 2025/02/03 15:00:38 by njeanbou         ###   ########.fr        #
+#    Updated: 2025/06/02 16:55:03 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex00
+NAME = converter
 
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)

@@ -1,40 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   class_ex.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/05 01:47:18 by njeanbou          #+#    #+#             */
-/*   Updated: 2025/09/10 13:08:19 by njeanbou         ###   ########.fr       */
+/*   Created: 2025/06/02 19:13:38 by njeanbou          #+#    #+#             */
+/*   Updated: 2025/06/02 19:15:55 by njeanbou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-#define WHATEVER_HPP
+#ifndef CLASS_EX_HPP
+#define CLASS_EX_HPP
 
-#include <string>
 #include <iostream>
+#include <string>
+#include <memory>
 
-
-template <typename T>
-void	swap(T& a, T& b)
+class test
 {
-	T	tmp = a;
-	a = b;
-	b = tmp;
-}
+    private:
+        std::string _name;
+    
+    public:
+        test(const std::string name);
+        test(const test& copy);
+        ~test();
 
-template <typename M>
-const M&	min(M& a, M& b)
-{
-	return (b <= a ? b : a);
-}
+        std::string getName() const;
 
-template <typename M>
-const M&	max(M& a, M& b)
-{
-	return (b >= a ? b : a);
-}
+
+};
+
 
 #endif

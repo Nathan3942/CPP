@@ -6,16 +6,16 @@
 #    By: njeanbou <njeanbou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/03 11:03:30 by njeanbou          #+#    #+#              #
-#    Updated: 2025/02/03 15:00:30 by njeanbou         ###   ########.fr        #
+#    Updated: 2025/06/02 18:57:36 by njeanbou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex01
+NAME = Serializer
 
 SRCS = $(wildcard *.cpp)
 OBJS = $(SRCS:.cpp=.o)
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -fsanitize=address -static-libasan
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 #-fsanitize=address -static-libasan
 CC = c++
 RM = rm -rf
 
